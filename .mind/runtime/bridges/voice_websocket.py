@@ -1,6 +1,6 @@
 """Voice WebSocket — real-time voice conversation.
 
-Ported from manemus/scripts/voice_server.py.
+Ported from mind-mcp voice server.
 Protocol:
   Client → Server: Binary frame (complete utterance, VAD-processed webm/opus)
   Server → Client: JSON state + transcript + response + MP3 audio chunks

@@ -1,7 +1,7 @@
 """
 Webapp live chat routes — FAQ cache, fast-path Anthropic API, orchestrator queue.
 
-Ported from manemus Flask routes/chat.py → FastAPI.
+Ported from mind-mcp Flask routes/chat.py → FastAPI.
 """
 
 import json

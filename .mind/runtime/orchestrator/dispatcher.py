@@ -3,10 +3,10 @@
 Watches the message queue, dispatches requests to Claude Code subprocesses
 via the thread pool, routes responses back to bridge callbacks.
 
-Key change from manemus: tick interval is controlled by ComputeBudget,
+Key change from mind-mcp: tick interval is controlled by ComputeBudget,
 not a fixed sleep. Higher trust citizens get proportionally more ticks.
 
-Ported and restructured from manemus/scripts/orchestrator.py orchestrate().
+Ported and restructured from mind-mcp orchestrator dispatch loop.
 """
 
 import os

@@ -1,7 +1,7 @@
 """
 Authentication routes — registration, login, magic links, JWT, password reset.
 
-Ported from manemus Flask routes/auth.py → FastAPI.
+Ported from mind-mcp Flask routes/auth.py → FastAPI.
 """
 
 import json

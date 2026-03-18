@@ -1,6 +1,6 @@
 """Telegram Bridge — polling bot with citizen routing.
 
-Core functionality ported from manemus/scripts/telegram_bridge.py.
+Core functionality ported from mind-mcp telegram bridge.
 Polls Telegram getUpdates, processes messages, routes to orchestrator queue.
 
 Architecture:
@@ -481,7 +481,7 @@ def process_update(update: dict) -> bool:
                 length = entity.get("length", 0)
                 mention = text[start:start + length]
                 # Check if it mentions our bot
-                if mention.lower().startswith("@manemus") or mention.lower().startswith("@mind"):
+                if mention.lower().startswith("@mind_protocol") or mention.lower().startswith("@mind"):
                     is_bot_mentioned = True
                     break
 

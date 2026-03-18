@@ -5,7 +5,7 @@ are appended to a JSONL file. The dispatcher pops the highest-priority item.
 
 Priority = trust_tier_boost + mode_priority + urgency_boost + recency_boost
 
-Ported from manemus/scripts/orchestrator.py (lines 1878-2001).
+Ported from mind-mcp orchestrator message queue.
 """
 
 import json

@@ -38,7 +38,7 @@ logger = logging.getLogger("cognition.brain_seeder")
 
 _PROJECT_ROOT = Path(__file__).parent.parent.parent
 _CITIZENS_DIRS = [
-    _PROJECT_ROOT / "citizens",           # primary: copied from manemus
+    _PROJECT_ROOT / "citizens",           # primary: citizen identities
     _PROJECT_ROOT / ".mind" / "citizens",  # fallback: protocol template
 ]
 
@@ -47,7 +47,7 @@ def _find_citizen_identity(citizen_handle: str) -> Optional[dict]:
     """Load citizen identity from citizens/{handle}/ or .mind/citizens/{handle}/.
 
     Searches for identity data in order:
-    1. profile.json (manemus format with id, display_name, bio, etc.)
+    1. profile.json (mind-mcp format with id, display_name, bio, etc.)
     2. identity.json (structured identity)
     3. identity.md / CLAUDE.md (markdown identity)
 
@@ -65,7 +65,7 @@ def _find_citizen_identity(citizen_handle: str) -> Optional[dict]:
         logger.debug(f"No citizen directory found for {citizen_handle}")
         return None
 
-    # Try profile.json (manemus format)
+    # Try profile.json (mind-mcp format)
     profile_path = citizen_dir / "profile.json"
     if profile_path.exists():
         try:
@@ -96,7 +96,7 @@ def _find_citizen_identity(citizen_handle: str) -> Optional[dict]:
 
 
 def _normalize_profile(profile: dict, citizen_dir: Path) -> dict:
-    """Convert manemus profile.json format to brain seeder identity format."""
+    """Convert mind-mcp profile.json format to brain seeder identity format."""
     identity: dict = {"_source": str(citizen_dir / "profile.json")}
 
     # Map profile fields to identity fields

@@ -7,7 +7,7 @@ Account dirs: ~/.claude-accounts/{a,b,...}/.claude/.credentials.json
 Each dir is a minimal HOME with just the .claude/ credentials.
 Shared config (settings.json) is symlinked from the real home.
 
-Ported as-is from manemus/scripts/account_balancer.py — proven infrastructure.
+Ported from mind-mcp account balancer — proven infrastructure.
 """
 
 import json
